@@ -1,0 +1,328 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style type="text/css">
+        html,
+        body {
+            padding: 0;
+            margin: 0;
+        }
+        
+        .container {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 10vh 90vh;
+            background-image: url("https://th.bing.com/th/id/R.71bd1f639a349be73e3a50aff654f6fe?rik=rQGoUv7Gu4dm3g&riu=http%3a%2f%2fwww.pixelstalk.net%2fwp-content%2fuploads%2f2016%2f06%2fFree-Download-Abstract-Backgrounds-HD.jpg&ehk=QOpjZ8DwoI9TaAykD9GWkZ%2f%2bcOr5dXeCPpEvvEXrV5k%3d&risl=&pid=ImgRaw&r=0");
+            background-repeat: no-repeat;
+            background-size: cover;
+            perspective: 500px;
+        }
+        
+        .header {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+        
+        .header nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        header span {
+            position: absolute;
+            right: 0;
+            transform: translateX(-15px);
+        }
+        
+        .header:hover {
+            background-color: white;
+        }
+        
+        .logo {
+            margin-left: 20px;
+            font-size: 22px;
+        }
+        
+        #menu {
+            display: flex;
+            gap: 30px;
+            justify-content: space-between;
+            list-style: none;
+        }
+        
+        .a {
+            text-decoration: none;
+            color: black;
+            background-color: transparent;
+            font-size: 20px;
+        }
+        
+        .ab {
+            font-size: 20px;
+            text-decoration: none;
+            color: black;
+        }
+        
+        .button1 {
+            width: 100px;
+            border-radius: 5px;
+            padding: 5px 5px;
+            background-color: aliceblue;
+            border: none;
+            animation-name: myframes;
+            animation-duration: 3s;
+            animation-timing-function: ease-in-out;
+            animation-delay: s;
+            cursor: pointer;
+        }
+        
+        .button1:hover {
+            transform: translateZ(20px)translateY(-2px);
+            border-bottom: solid gray 2px;
+        }
+        
+        #button2 {
+            border-radius: 5px;
+            padding: 5px 5px;
+            background-color: #FFB6C1;
+            border: none;
+        }
+        
+        #button2:hover {
+            transform: translateZ(20px)translateY(-2px);
+            border-bottom: solid gray 2px;
+        }
+        
+        @media(max-width:900px) {
+            .container {
+                overflow-x: hidden;
+            }
+            #button2 {
+                display: none;
+            }
+            .button1 {
+                display: none;
+            }
+            .logo {
+                margin-left: 40px;
+            }
+            #menu {
+                position: absolute;
+                top: 8vh;
+                right: 0;
+                width: 30vh;
+                height: 92vh;
+                background: #fff;
+                flex-direction: column;
+                gap: 30px;
+                justify-content: space-around;
+                align-items: center;
+                margin-top: 13px;
+                animation-duration: 2s;
+                animation-timing-function: ease-in;
+                visibility: hidden;
+            }
+            .bm1 {
+                display: none;
+            }
+            .bm2 {
+                display: none;
+            }
+            .titulo {
+                display: flex;
+                margin-top: -10px;
+            }
+            #mobilemenu {
+                display: flex;
+                position: absolute;
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                background-color: #FFf;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 2px;
+                cursor: pointer;
+            }
+        }
+        
+        .mobilemenu {}
+        
+        @keyframes myframes {
+            0% {
+                transform: translateY(-1000px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+        
+        #mobilemenu:hover {
+            background: #FFB6C1;
+        }
+        
+        #line1 {
+            width: 30px;
+            height: 3px;
+            background: black;
+        }
+        
+        #line2 {
+            width: 30px;
+            height: 3px;
+            background: black;
+        }
+        
+        #line3 {
+            width: 30px;
+            height: 3px;
+            background: black;
+        }
+        
+        .maincontainer {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-content: center;
+        }
+        
+        .text {
+            margin-top: 100px;
+            margin-left: 30px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .titulo {
+            font-size: 55px;
+            color: white;
+        }
+        
+        .p {
+            font-size: 32px;
+            color: white;
+            margin-top: -20px;
+        }
+        
+        .img {
+            width: 0px;
+            height: 00px;
+        }
+        
+        .buttonm {
+            display: flex;
+            margin-left: 30px;
+            border-radius: 5px;
+            gap: 40px;
+        }
+        
+        .bm1 {
+            padding: 8px 40px;
+            background-color: transparent;
+            animation-name: myframes;
+            animation-duration: 3s;
+            animation-timing-function: ease-in-out;
+            animation-delay: s;
+        }
+        
+        .bm1:hover {
+            perspective: 20px;
+            border-bottom: solid #1E90FF 2px;
+            transform: translateZ(-50px) translateY(-2px);
+        }
+        
+        .bm2 {
+            padding: 8px 40px;
+            background-color: transparent;
+            animation-name: myframes;
+            animation-duration: 3s;
+            animation-timing-function: ease-in-out;
+            animation-delay: s;
+        }
+        
+        .bm2:hover {
+            perspective: 20px;
+            border-bottom: solid #1E90FF 2px;
+            transform: translateZ(-50px) translateY(-2px);
+        }
+        
+        .am {
+            font-size: 16px;
+            text-decoration: none;
+            color: white;
+        }
+        
+        #nav.active #menu {
+            visibility: visible;
+        }
+        
+        #nav.active span #line1 {
+            visibility: hidden;
+        }
+        
+        #nav.active span #line2 {
+            transform: rotate(135deg)translateX(-2px);
+        }
+        
+        #nav.active span #line3 {
+            transform: rotate(-135deg) translateY(6px) translateX(2px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <h1 class="l">logo</h1>
+            </div>
+            <nav id="nav">
+                <ul id="menu">
+                    <li><a href="" class="a">HOME</a></li>
+                    <li><a href="" class="a">ABOUT</a></li>
+                    <li><a href="" class="a">CONTACT</a></li>
+                    <li><a href="" class="a">PROJECTS</a></li>
+                </ul>
+                <span id="mobilemenu" onclick="mobmenu()">
+                    <div id="line1" onclick="fechar()"></div>
+                    <div id="line2"></div>
+                    <div id="line3" onclick="fechar()"></div>
+                </span>
+                <span>
+                    <button  class="button1"><a href="file:///C:/Users/lucas/Documents/htmlcss/site%201/HTMLPage13.html" class="ab">LOGIN</a></button>
+                    <button id="button2" onclick="button('blue')" ><a href="#" class="ab">GET START</a></button>
+                </span>
+            </nav>
+        </header>
+        <main class="main">
+            <div class="maincontainer">
+                <div class="text">
+                    <h1 class="titulo">The video host <br /> with the most</h1>
+                    <p class="p">See measurable results from your<br /> videos (and podcasts, too) with our<br /> complete hosting platform<br /> for marketers.</p>
+                </div>
+                <div class="vdeo">
+                    <img src="" class="img" />
+                </div>
+                <span class="buttonm">
+                    <button class="bm1"><a href="" class="am">TRY</a></button>
+                    <button class="bm2"><a href="" class="am">EXPLORE</a></button>
+                </span>
+            </div>
+        </main>
+    </div>
+    <script>
+        function mobmenu() {
+            var myElement = document.getElementById("nav");
+            // set inline-style transform to element
+            myElement.classList.toggle("active");
+        }
+    </script>
+</body>
+
+</html>
